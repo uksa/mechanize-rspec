@@ -1,3 +1,3 @@
-flyv
+Mechanize and RSpec
 ====
 
