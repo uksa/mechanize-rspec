@@ -11,7 +11,6 @@ Mechanize and RSpec
 5. bundle install - installs all required gems
 
 #Tests
-
 Following tests are available
 
 ##Sign In Spec
