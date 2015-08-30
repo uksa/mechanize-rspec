@@ -23,17 +23,17 @@ RSpec.describe SignIn, '#users' do
 
     it 'authentication logs in when credentials are Admin' do
       page = @sign_in.user(User.admin_user)
-      expect(page.at(H3_TAG).text).to eq ('Member Details')
+      expect(page.title).to eq ('UK Software Alliance | Members Home')
     end
 
     it 'authentication logs in when credentials are Standard User' do
       page = @sign_in.user(User.standard_user)
-      expect(page.at(H3_TAG).text).to eq ('Member Details')
+      expect(page.title).to eq ('UK Software Alliance | Members Home')
     end
 
     it 'authentication logs in when credentials are Suspend User' do
       page = @sign_in.user(User.suspended_user)
-      expect(page.at(H3_TAG).text).to eq ('Member Details')
+      expect(page.title).to eq ('UK Software Alliance | Account Suspended')
     end
 
   end
