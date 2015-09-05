@@ -1,18 +1,11 @@
 require 'rubygems'
 require 'mechanize'
 require 'sign_in'
+require_relative '../spec/spec_helper'
 
 RSpec.describe SignIn, '#users' do
 
   H3_TAG = '.container>h3'
-
-  before(:each) do
-    @url = 'http://www.uksa-testing.co.uk'
-    @agent = Mechanize.new { |agent|
-      agent.user_agent_alias = 'Mac Safari'
-    }
-    @sign_in = SignIn.new(@agent, @url)
-  end
 
    context 'With Users signing in' do
 

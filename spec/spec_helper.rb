@@ -14,6 +14,18 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = 'random'
+
+  config.before(:each) do
+    @url = 'http://uksa-testing.co.uk'
+    @agent = Mechanize.new { |agent|
+      agent.user_agent_alias = 'Mac Safari'
+    }
+    @sign_in = SignIn.new(@agent, @url)
+  end
+
+  config.after(:each) do
+    @agent.shutdown
+  end
 end
 
 
