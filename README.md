@@ -7,11 +7,14 @@ Mechanize and RSpec
 1. https://uksa.eu 
 2. Follow up the Articles on Rspec and Mechanize
 
-#Tests
+# Tests
 Following tests are available
 
-##Sign In Spec
-1. Authentication Fails for Unknown Credentials
-2. Authentication Passes for Admin
-3. Authentication Passes for Standard User
-4. Authentication Passed for Suspended User
+## Sign In Spec
+1. Fails authentication if credentials are Unknown
+2. Logs in when credentials are Admin
+3. logs in when credentials are Standard User
+4. logs in when credentials are Suspended User
+
+## Create User
+1. Registers a new user and take them to the "Members Welcome" page
