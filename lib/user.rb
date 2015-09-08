@@ -22,4 +22,8 @@ class User
     self.new('suspend@uksa.eu', 'Password1')
   end
 
+  def self.new_user
+    self.new(Faker::Internet.email, password: 'Password1')
+  end
+
 end

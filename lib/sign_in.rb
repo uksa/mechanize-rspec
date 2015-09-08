@@ -1,21 +1,20 @@
-require 'user'
+require 'base_page'
+require_relative 'user'
 
-class SignIn
+class SignIn < BasePage
 
-  attr_reader :agent, :url
+  USERNAME = 'user[email]'
+  PASSWORD = 'user[password]'
 
-  def initialize(agent, url)
-    @agent = agent
-    @url   = url
+  def initialize(page)
+    super(page)
   end
 
   def user(user)
-    @agent.get(@url) do |page|
-      form = page.forms.first
-      form['user[email]']   = user.email
-      form['user[password]'] = user.password
-      return form.submit
-    end
+    form = page.forms.first
+    form[USERNAME] = user.email
+    form[PASSWORD] = user.password
+    form.submit
   end
 
 end
