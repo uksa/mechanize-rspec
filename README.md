@@ -5,7 +5,7 @@ Mechanize and RSpec
 
 #Setting up
 1. https://uksa.eu 
-2. Follow up the Articles on Rspec and Mechanize
+2. Follow up the Articles on [Rspec](https://uksa.eu/test-automation-ruby-rspec) and [Mechanize](https://uksa.eu/test-automation-ruby-mechanize)
 
 # Tests
 Following tests are available
